@@ -108,7 +108,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>Western_Union_Prod</finalName>
+		<finalName>Western_Union_Production</finalName>
 		
 		<plugins>
 			<plugin>
