@@ -22,7 +22,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://54.197.89.251:9000/</sonar.host.url>
+		<sonar.host.url>http://18.233.160.81:9000/</sonar.host.url>
 		<sonar.login>DonChubbi</sonar.login>
 		<sonar.password>Admin123</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -96,19 +96,19 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://52.90.30.255:8081/repository/RBC_App_Releases/</url>
+	      <url>http://44.208.28.170:8081/repository/Western-Union-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://52.90.30.255:8081/repository/RBC_App_Snapshot/</url>
+	      <url>http://44.208.28.170:8081/repository/Western-Union-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
 	
 	<build>
-		<finalName>RBC_App</finalName>
+		<finalName>Western_Union_Prod</finalName>
 		
 		<plugins>
 			<plugin>
