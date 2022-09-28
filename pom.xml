@@ -22,7 +22,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://54.226.97.80:9000/</sonar.host.url>
+		<sonar.host.url>http://54.82.55.142:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -96,19 +96,19 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://44.208.28.170:8081/repository/Western-Union-releases/</url>
+	      <url>http://44.202.159.33:8081/repository/RBC_App_Releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://44.208.28.170:8081/repository/Western-Union-Snapshot/</url>
+	      <url>http://44.202.159.33:8081/repository/RBC_App_Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
 	
 	<build>
-		<finalName>Western_Union_Production</finalName>
+		<finalName>PipeLine_2/finalName>
 		
 		<plugins>
 			<plugin>
