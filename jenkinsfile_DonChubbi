@@ -1,0 +1,36 @@
+node{
+  def mavenHome = tool name: 'maven3.8.6'
+  stage('1cloneCode'){
+      git "https://github.com/DonChubbi/maven-web-application"
+  }
+  stage('2Test&Build'){
+      sh "${mavenHome}/bin/mvn clean package"}
+
+    stage('3CodeQuality') {
+        sh "${mavenHome}/bin/mvn sonar:sonar"
+    }
+
+    stage('4UploadArtifact') {
+        sh "${mavenHome}/bin/mvn deploy"
+    }
+
+    stage('5DeploytoUAT') {
+        sh "echo 'deploying to UAT'"
+        deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://52.91.85.194:8060/')], contextPath: null, war: 'target/*war'
+    }
+
+    stage('6ApprovalGate') {
+        sh "echo 'undergoing review process'"
+        timeout(time:5, unit:'DAYS') {
+            input message: 'The application is ready for deployment, please review'}
+    }
+
+    stage('7DeploytoProduction') {
+        deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://52.91.85.194:8060/')], contextPath: null, war: 'target/*war'
+    }
+
+    stage('8EmailNotification') {
+        emailext body: '''Hi All,
+Just a quick update of the project\'s progress''', subject: 'PipeLine Project Update', to: 'chibnnadi@gmail.com'
+    }
+}
