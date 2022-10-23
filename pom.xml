@@ -108,7 +108,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>PipeLine_3</finalName>
+		<finalName>ebay-app</finalName>
 		
 		<plugins>
 			<plugin>
