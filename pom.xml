@@ -22,9 +22,9 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://18.205.38.212:4000/</sonar.host.url>
+		<sonar.host.url>http://52.91.144.238:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>Admin123</sonar.password>
+		<sonar.password>admin</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -96,19 +96,19 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://18.205.38.212:5000/repository/ebay-app-release/</url>
+	      <url>http://3.95.26.172:8081/repository/tesla-1-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://18.205.38.212:5000/repository/ebay-app-snapshot/</url>
+	      <url>http://3.95.26.172:8081/repository/tesla-1-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
 	
 	<build>
-		<finalName>ebay-app</finalName>
+		<finalName>tesla-1</finalName>
 		
 		<plugins>
 			<plugin>
